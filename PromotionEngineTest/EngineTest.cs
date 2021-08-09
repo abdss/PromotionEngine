@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace PromotionEngineTest
 {
     [TestClass]
-    public class UnitTest1
+    public class EngineTest
     {
         [TestMethod]
         public void TestMethod1()
