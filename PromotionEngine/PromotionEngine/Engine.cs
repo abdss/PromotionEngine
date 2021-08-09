@@ -20,13 +20,23 @@ namespace PromotionEngine
         {
             var total = 0;
 
-            total += ApplyPromotion(quantityA);
+            total += ApplyPromotion(quantityA, priceA, promoQuantityA, promoPriceA);
 
-            total += ApplyPromotion(quantityA);
+            total += ApplyPromotion(quantityB, priceB, promoQuantityB, promoPriceB);
 
-            total += ApplyCDPromotion(quantityC, quantityD);
+            total += ApplyCDPromotion(quantityC, quantityD, promoPriceCD);
             
             return total;
+        }
+
+        private int ApplyPromotion(int quantityA, int priceA, int promoQuantityA, int promoPriceA)
+        {
+
+        }
+
+        private int ApplyCDPromotion(int quantityC, int quantityD, int promoPriceCD)
+        {
+
         }
     }
 }
