@@ -77,5 +77,14 @@ namespace PromotionEngineTest
 
             Assert.AreEqual(60, result);
         }
+
+        [TestMethod]
+        public void TestAllPromotions()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(3, 5, 1, 1);
+
+            Assert.AreEqual(280, result);
+        }
     }
 }
