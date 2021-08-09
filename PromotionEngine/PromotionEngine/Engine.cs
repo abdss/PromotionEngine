@@ -38,7 +38,9 @@ namespace PromotionEngine
 
         private int ApplyCDPromotion(int quantityC, int quantityD, int priceC, int priceD, int promoPriceCD)
         {
-            return (quantityC * priceC) + (quantityD * priceD);
+            return (quantityC > quantityD) ? 
+                ((quantityC - quantityD) * priceC) + (promoPriceCD * quantityD):
+                ((quantityD - quantityC) * priceD) + (promoPriceCD * quantityC);
         }
     }
 }

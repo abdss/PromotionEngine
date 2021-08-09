@@ -19,9 +19,9 @@ namespace PromotionEngineTest
         public void TestBasicCalculationWithoutPromotionWithD()
         {
             var engine = new Engine();
-            var result = engine.CalculateOrderValue(1, 1, 1, 1);
+            var result = engine.CalculateOrderValue(1, 1, 0, 1);
 
-            Assert.AreEqual(115, result);
+            Assert.AreEqual(95, result);
         }
 
         [TestMethod]
@@ -52,12 +52,30 @@ namespace PromotionEngineTest
         }
 
         [TestMethod]
-        public void TestPromotionCD()
+        public void TestPromotionCDwithSameQuantity()
         {
             var engine = new Engine();
             var result = engine.CalculateOrderValue(0, 0, 1, 1);
 
             Assert.AreEqual(30, result);
+        }
+
+        [TestMethod]
+        public void TestPromotionCDwithMoreC()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(0, 0, 3, 1);
+
+            Assert.AreEqual(70, result);
+        }
+
+        [TestMethod]
+        public void TestPromotionCDwithMoreD()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(0, 0, 1, 3);
+
+            Assert.AreEqual(60, result);
         }
     }
 }
