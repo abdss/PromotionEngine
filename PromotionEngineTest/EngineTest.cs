@@ -7,12 +7,30 @@ namespace PromotionEngineTest
     public class EngineTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestBasicCalculationWithoutPromotionWithoutD()
         {
             var engine = new Engine();
             var result = engine.CalculateOrderValue(1,1,1,0);
 
             Assert.AreEqual(100, result);
+        }
+
+        [TestMethod]
+        public void TestBasicCalculationWithoutPromotionWithD()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(1, 1, 1, 1);
+
+            Assert.AreEqual(115, result);
+        }
+
+        [TestMethod]
+        public void TestPromotionA()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(3, 1, 1, 0);
+
+            Assert.AreEqual(180, result);
         }
     }
 }
