@@ -1,0 +1,12 @@
+
+*.dll
+*.txt
+*.pdb
+*.cache
+*.json
+*.cache
+*.CopyComplete
+*.cache
+*.cache
+PromotionEngine/PromotionEngine/obj/Debug/netstandard2.0/PromotionEngine.csprojAssemblyReference.cache
+PromotionEngineTest/obj/Debug/netcoreapp3.1/PromotionEngineTest.csprojAssemblyReference.cache
