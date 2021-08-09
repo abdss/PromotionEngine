@@ -31,12 +31,12 @@ namespace PromotionEngine
 
         private int ApplyPromotion(int quantityA, int priceA, int promoQuantityA, int promoPriceA)
         {
-
+            return 0;
         }
 
         private int ApplyCDPromotion(int quantityC, int quantityD, int priceC, int priceD, int promoPriceCD)
         {
-
+            return 0;
         }
     }
 }
