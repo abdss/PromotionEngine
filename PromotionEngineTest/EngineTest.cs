@@ -32,5 +32,23 @@ namespace PromotionEngineTest
 
             Assert.AreEqual(180, result);
         }
+
+        [TestMethod]
+        public void TestPromotionB()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(1, 4, 1, 0);
+
+            Assert.AreEqual(160, result);
+        }
+
+        [TestMethod]
+        public void TestPromotionAandB()
+        {
+            var engine = new Engine();
+            var result = engine.CalculateOrderValue(5, 5, 1, 0);
+
+            Assert.AreEqual(370, result);
+        }
     }
 }

@@ -31,7 +31,9 @@ namespace PromotionEngine
 
         private int ApplyPromotionAorB(int quantity, int price, int promoQuantity, int promoPrice)
         {
-            return quantity * price;
+            var promoUnits = quantity / promoQuantity;
+            var normalUnits = quantity % promoQuantity;
+            return (promoUnits * promoPrice) + (normalUnits * price);
         }
 
         private int ApplyCDPromotion(int quantityC, int quantityD, int priceC, int priceD, int promoPriceCD)
