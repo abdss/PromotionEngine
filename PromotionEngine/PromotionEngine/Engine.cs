@@ -4,17 +4,17 @@ namespace PromotionEngine
 {
     public class Engine
     {
-        var priceA = 50;
-        var priceB = 30;
-        var priceC = 20;
-        var priceD = 15;
+        int priceA = 50;
+        int priceB = 30;
+        int priceC = 20;
+        int priceD = 15;
 
-        var promoQuantityA = 3;
-        var promoQuantityB = 2;
+        int promoQuantityA = 3;
+        int promoQuantityB = 2;
 
-        var promoPriceA = 130;
-        var promoPriceB = 45;
-        var promoPriceCD = 30;
+        int promoPriceA = 130;
+        int promoPriceB = 45;
+        int promoPriceCD = 30;
 
         public int CalculateOrderValue(int quantityA, int quantityB, int quantityC, int quantityD)
         {
@@ -24,7 +24,7 @@ namespace PromotionEngine
 
             total += ApplyPromotion(quantityB, priceB, promoQuantityB, promoPriceB);
 
-            total += ApplyCDPromotion(quantityC, quantityD, promoPriceCD);
+            total += ApplyCDPromotion(quantityC, quantityD, priceC, priceD, promoPriceCD);
             
             return total;
         }
@@ -34,7 +34,7 @@ namespace PromotionEngine
 
         }
 
-        private int ApplyCDPromotion(int quantityC, int quantityD, int promoPriceCD)
+        private int ApplyCDPromotion(int quantityC, int quantityD, int priceC, int priceD, int promoPriceCD)
         {
 
         }
